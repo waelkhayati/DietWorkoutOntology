@@ -1,0 +1,742 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/waelkhayati/ontologies/2022/5/Diet"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/waelkhayati/ontologies/2022/5/Diet">
+    <Prefix name="" IRI="http://www.semanticweb.org/waelkhayati/ontologies/2022/5/Diet"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Allergies"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AllergiesDiet"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Avg_cal_avg_prot"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cardio"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Dairy_free_diet"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DietPlan"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ExtemelyObese"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Gluten_free_diet"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Heavy_lifting"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#High_prot_avg_cal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#High_prot_high_cal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Low_cal_High_prot"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Low_cal_avg_prot"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MildThinness"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ModerateThinness"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MorbidlyObese"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Normal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Nut_free_diet"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Obese"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Objectives"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Overweight"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Person"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Seafood_free_diet"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SevereThinness"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Wael"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WeightCategory"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Workout_routine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ahmed"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#sarra"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#weightGainDiet"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#weightLossDiet"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAllergy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasObjective"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasActivity"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasAge"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasBMI"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Build_muscles"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Gluten"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Lactose"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Nuts"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Seafood"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Weight_gain"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Weight_loss"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#become_fit"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#Avg_cal_avg_prot"/>
+        <ObjectIntersectionOf>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasObjective"/>
+                <NamedIndividual IRI="#Weight_loss"/>
+            </ObjectHasValue>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasBMI"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:double"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">25.0</Literal>
+                    </FacetRestriction>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxExclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">35.0</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Cardio"/>
+        <ObjectIntersectionOf>
+            <ObjectUnionOf>
+                <ObjectHasValue>
+                    <ObjectProperty IRI="#hasObjective"/>
+                    <NamedIndividual IRI="#Weight_loss"/>
+                </ObjectHasValue>
+                <ObjectHasValue>
+                    <ObjectProperty IRI="#hasObjective"/>
+                    <NamedIndividual IRI="#become_fit"/>
+                </ObjectHasValue>
+            </ObjectUnionOf>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasAge"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:integer"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">0</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Dairy_free_diet"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#hasAllergy"/>
+            <NamedIndividual IRI="#Lactose"/>
+        </ObjectHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ExtemelyObese"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasBMI"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:double"/>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">35.0</Literal>
+                </FacetRestriction>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxExclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">40.0</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Gluten_free_diet"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#hasAllergy"/>
+            <NamedIndividual IRI="#Gluten"/>
+        </ObjectHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Heavy_lifting"/>
+        <ObjectIntersectionOf>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasObjective"/>
+                <NamedIndividual IRI="#Build_muscles"/>
+            </ObjectHasValue>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasAge"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:integer"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">20</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#High_prot_avg_cal"/>
+        <ObjectIntersectionOf>
+            <ObjectUnionOf>
+                <ObjectHasValue>
+                    <ObjectProperty IRI="#hasObjective"/>
+                    <NamedIndividual IRI="#Build_muscles"/>
+                </ObjectHasValue>
+                <ObjectHasValue>
+                    <ObjectProperty IRI="#hasObjective"/>
+                    <NamedIndividual IRI="#Weight_gain"/>
+                </ObjectHasValue>
+                <ObjectHasValue>
+                    <ObjectProperty IRI="#hasObjective"/>
+                    <NamedIndividual IRI="#become_fit"/>
+                </ObjectHasValue>
+            </ObjectUnionOf>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasBMI"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:double"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">17.0</Literal>
+                    </FacetRestriction>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxExclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">30.0</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#High_prot_high_cal"/>
+        <ObjectIntersectionOf>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasObjective"/>
+                <NamedIndividual IRI="#Weight_gain"/>
+            </ObjectHasValue>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasBMI"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:double"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxExclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">17.0</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Low_cal_High_prot"/>
+        <ObjectIntersectionOf>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasObjective"/>
+                <NamedIndividual IRI="#Weight_loss"/>
+            </ObjectHasValue>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasBMI"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:double"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">40.0</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Low_cal_avg_prot"/>
+        <ObjectIntersectionOf>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasObjective"/>
+                <NamedIndividual IRI="#Weight_loss"/>
+            </ObjectHasValue>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasBMI"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:double"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">35.0</Literal>
+                    </FacetRestriction>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxExclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">40.0</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#MildThinness"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasBMI"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:double"/>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">17.0</Literal>
+                </FacetRestriction>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxExclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">18.5</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ModerateThinness"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasBMI"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:double"/>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">16.0</Literal>
+                </FacetRestriction>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxExclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">17.0</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#MorbidlyObese"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasBMI"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:double"/>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">40.0</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Normal"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasBMI"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:double"/>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">18.5</Literal>
+                </FacetRestriction>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxExclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">25.0</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Nut_free_diet"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#hasAllergy"/>
+            <NamedIndividual IRI="#Nuts"/>
+        </ObjectHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Obese"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasBMI"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:double"/>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">30.0</Literal>
+                </FacetRestriction>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxExclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">35.0</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Overweight"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasBMI"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:double"/>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">25.0</Literal>
+                </FacetRestriction>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxExclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">30.0</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Seafood_free_diet"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#hasAllergy"/>
+            <NamedIndividual IRI="#Seafood"/>
+        </ObjectHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#SevereThinness"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasBMI"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:double"/>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxExclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">16.0</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#Allergies"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AllergiesDiet"/>
+        <Class IRI="#DietPlan"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Avg_cal_avg_prot"/>
+        <Class IRI="#weightLossDiet"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cardio"/>
+        <Class IRI="#Workout_routine"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Dairy_free_diet"/>
+        <Class IRI="#AllergiesDiet"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DietPlan"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ExtemelyObese"/>
+        <Class IRI="#WeightCategory"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Gluten_free_diet"/>
+        <Class IRI="#AllergiesDiet"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Heavy_lifting"/>
+        <Class IRI="#Workout_routine"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#High_prot_avg_cal"/>
+        <Class IRI="#weightGainDiet"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#High_prot_high_cal"/>
+        <Class IRI="#weightGainDiet"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Low_cal_High_prot"/>
+        <Class IRI="#weightLossDiet"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Low_cal_avg_prot"/>
+        <Class IRI="#weightLossDiet"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MildThinness"/>
+        <Class IRI="#WeightCategory"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ModerateThinness"/>
+        <Class IRI="#WeightCategory"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MorbidlyObese"/>
+        <Class IRI="#WeightCategory"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Normal"/>
+        <Class IRI="#WeightCategory"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Nut_free_diet"/>
+        <Class IRI="#AllergiesDiet"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Obese"/>
+        <Class IRI="#WeightCategory"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Objectives"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Overweight"/>
+        <Class IRI="#WeightCategory"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Person"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Seafood_free_diet"/>
+        <Class IRI="#AllergiesDiet"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SevereThinness"/>
+        <Class IRI="#WeightCategory"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wael"/>
+        <Class IRI="#Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wael"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#hasObjective"/>
+            <NamedIndividual IRI="#Weight_loss"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wael"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasBMI"/>
+            <DataOneOf>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">32.0</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wael"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasAge"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">23</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WeightCategory"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Workout_routine"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ahmed"/>
+        <Class IRI="#Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ahmed"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#hasObjective"/>
+            <NamedIndividual IRI="#Build_muscles"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ahmed"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#hasObjective"/>
+            <NamedIndividual IRI="#Weight_loss"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ahmed"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasBMI"/>
+            <DataOneOf>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">36.0</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ahmed"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasAge"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">23</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#sarra"/>
+        <Class IRI="#Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#sarra"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#hasAllergy"/>
+            <NamedIndividual IRI="#Seafood"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#sarra"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#hasObjective"/>
+            <NamedIndividual IRI="#Weight_gain"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#sarra"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#hasObjective"/>
+            <NamedIndividual IRI="#become_fit"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#sarra"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasBMI"/>
+            <DataOneOf>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">19.0</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#sarra"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasAge"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">22</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#weightGainDiet"/>
+        <Class IRI="#DietPlan"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#weightLossDiet"/>
+        <Class IRI="#DietPlan"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Avg_cal_avg_prot"/>
+        <Class IRI="#Low_cal_High_prot"/>
+        <Class IRI="#Low_cal_avg_prot"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#ExtemelyObese"/>
+        <Class IRI="#MildThinness"/>
+        <Class IRI="#ModerateThinness"/>
+        <Class IRI="#MorbidlyObese"/>
+        <Class IRI="#Normal"/>
+        <Class IRI="#Obese"/>
+        <Class IRI="#Overweight"/>
+        <Class IRI="#SevereThinness"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#weightGainDiet"/>
+        <Class IRI="#weightLossDiet"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#Objectives"/>
+        <NamedIndividual IRI="#Build_muscles"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Allergies"/>
+        <NamedIndividual IRI="#Gluten"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Allergies"/>
+        <NamedIndividual IRI="#Lactose"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Allergies"/>
+        <NamedIndividual IRI="#Nuts"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Allergies"/>
+        <NamedIndividual IRI="#Seafood"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Objectives"/>
+        <NamedIndividual IRI="#Weight_gain"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Objectives"/>
+        <NamedIndividual IRI="#Weight_loss"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Objectives"/>
+        <NamedIndividual IRI="#become_fit"/>
+    </ClassAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasObjective"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasActivity"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasAge"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasBMI"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasActivity"/>
+        <Class IRI="#Person"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasActivity"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasAge"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasBMI"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
